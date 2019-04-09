@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "i-button": "/common/iview/button/index"
+  }
+}

@@ -1,0 +1,56 @@
+<view class="myreport-content">
+  <view class="myreopr-tab">
+    <i-tabs current="{{ current }}" bindchange="handleChange">
+      <i-tab key="{{0}}" title="本周"></i-tab>
+      <i-tab key="{{1}}" title="本月"></i-tab>
+    </i-tabs>
+  </view>
+  <view class="myreopr-content">
+    <view class="panel">
+      <view class="table">
+        <view class="thead tItem flex">
+          <view class="flexItem">
+            <view>总金额</view>
+            <view>￥536288</view>
+            <view>-80.5</view>
+          </view>
+          <view class="flexItem">
+            <view>总数量</view>
+          </view>
+        </view>
+        <view class="tbody tItem flex">
+          <view class="flexItem">
+            <view>客单价</view>
+          </view>
+          <view class="flexItem">
+            <view>客单价</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="panel">
+      <view class="table">
+        <view class="thead tItem flex">
+          <view class="flexItem flex20">排名</view>
+          <view class="flexItem">门店</view>
+          <view class="flexItem">总金额</view>
+        </view>
+        <view class="tbody tItem flex">
+          <view class="flexItem flex20">1</view>
+          <view class="flexItem">上海正大广场店</view>
+          <view class="flexItem">20168</view>
+        </view>
+        <view class="tbody tItem flex">
+          <view class="flexItem flex20">1</view>
+          <view class="flexItem">上海正大广场店</view>
+          <view class="flexItem">20168</view>
+        </view>
+        <view class="tbody tItem flex">
+          <view class="flexItem flex20">1</view>
+          <view class="flexItem">上海正大广场店</view>
+          <view class="flexItem">20168</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

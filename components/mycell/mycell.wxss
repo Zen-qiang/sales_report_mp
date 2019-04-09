@@ -1,0 +1,11 @@
+.mycell {
+  font-size: 28rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.mycell .left {
+  flex: 0 0 140rpx;
+  margin-right: 20rpx;
+}
+.mycell .right {}

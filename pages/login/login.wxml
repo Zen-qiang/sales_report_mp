@@ -1,0 +1,8 @@
+<view class="p-login-container">
+  <view>
+    <view><i-input value="{{ userName }}" title="用户名" mode="wrapped" autofocus placeholder="请输入用户名" type="text" bind:change="inputUserName" maxlength="50" /></view>
+    <view><i-input value="{{ password }}" title="密码" mode="wrapped" placeholder="请输入密码"  type="password" bind:change="inputPasswrod" maxlength="50" /></view>
+    <view><i-button bind:click="login" type="primary" loading="{{loading}}">登陆</i-button></view>
+  </view>
+</view>
+<!-- <i-toast id="toast" /> -->

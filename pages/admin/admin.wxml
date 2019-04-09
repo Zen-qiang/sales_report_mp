@@ -1,0 +1,62 @@
+<view class="admin-content">
+  <view class="title">自定义报数模板</view>
+  <view class="admin-table">
+    <view class="admin-thead">
+      <view class="admin-item">
+        <view class="admin-flex40">名称</view>
+        <view class="admin-flex30">类型</view>
+        <view class="admin-flex20">序号</view>
+        <view class="admin-flex10">启用</view>
+      </view>
+    </view>
+    <view class="admin-tbody">
+      <view class="admin-item">
+        <view class="admin-flex40">
+          <view class="admin-edit">
+            <input />
+          </view>
+        </view>
+        <view class="admin-flex30">
+          <view class="admin-edit">
+            <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"><text>{{array[index]}}</text></picker>
+          </view>
+        </view>
+        <view class="admin-flex20">
+          <view class="admin-edit">
+            <picker mode="selector" bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}"><text>{{array1[index]}}</text></picker>
+          </view>
+        </view>
+        <view class="admin-flex10">
+          <view class="admin-middle">
+            <checkbox color="#2d8cf0" />
+          </view>
+        </view>
+      </view>
+      <view class="admin-item">
+        <view class="admin-flex40">
+          <view class="admin-edit">
+            <input />
+          </view>
+        </view>
+        <view class="admin-flex30">
+          <view class="admin-edit">
+            <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"><text>{{array[index]}}</text></picker>
+          </view>
+        </view>
+        <view class="admin-flex20">
+          <view class="admin-edit">
+            <picker mode="selector" bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}"><text>{{array1[index1]}}</text></picker>
+          </view>
+        </view>
+        <view class="admin-flex10">
+          <view class="admin-middle">
+            <checkbox color="#2d8cf0" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="admin-tfoot">
+      <i-button type="primary">确定</i-button>
+    </view>
+  </view>
+</view>
