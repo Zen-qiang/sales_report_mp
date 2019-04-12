@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "今日业绩",
   "usingComponents": {
-    "mycell": "../../components/mycell/mycell"
+    "mycell": "../../components/mycell/mycell",
+    "achievement": "../../components/achievement/achievement"
   }
 }

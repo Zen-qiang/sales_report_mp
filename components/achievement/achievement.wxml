@@ -1,0 +1,82 @@
+  <view class="item">
+    <mycell desc="日期">
+      <view>2019-03-06 星期二</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="门店数">
+      <view>6/25</view>
+    </mycell>
+  </view>
+  <view class="panel">
+    <view class="table">
+      <view class="thead tItem flex">
+        <view class="flexItem">
+          <view>总金额</view>
+          <view>￥536288</view>
+          <view>-80.5</view>
+        </view>
+        <view class="flexItem">
+          <view>总数量</view>
+        </view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem">
+          <view>客单价</view>
+        </view>
+        <view class="flexItem">
+          <view>客单价</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="title">区域门店排行</view>
+  <view class="panel">
+    <view class="table">
+      <view class="thead tItem flex">
+        <view class="flexItem flex20">排名</view>
+        <view class="flexItem">门店</view>
+        <view class="flexItem">总金额</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+    </view>
+  </view>
+  <view class="title">全国门店TOP10</view>
+  <view class="panel">
+    <view class="table">
+      <view class="thead tItem flex">
+        <view class="flexItem flex20">排名</view>
+        <view class="flexItem">门店</view>
+        <view class="flexItem">总金额</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+      <view class="tbody tItem flex">
+        <view class="flexItem flex20">1</view>
+        <view class="flexItem">上海正大广场店</view>
+        <view class="flexItem">20168</view>
+      </view>
+    </view>
+  </view>

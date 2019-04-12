@@ -4,21 +4,53 @@ const app = getApp()
 
 Page({
   data: {
-    index: 0,
-    array: ['数字', '文本'],
-    index1: 0,
-    array1: ['1', '2']
+    dataArr: [
+      {
+        type: ['数字', '文本', '金额'],
+        index: 0,
+        checked: false
+      },
+      {
+        type: ['数字', '文本', '金额'],
+        index: 0,
+        checked: false
+      }
+    ]
   },
-  bindPickerChange (e) {
-    console.log(e.detail)
+  pickerChange (e) {
+    // console.log(e)
+    const key = 'dataArr[' + e.currentTarget.dataset.index + '].index'
     this.setData({
-      index: e.detail.value
+      [key]: e.detail.value
     })
   },
-  bindPickerChange1 (e) {
-    console.log(e.detail)
+  switchChange (e) {
+    // console.log(e)
+    const key = 'dataArr[' + e.currentTarget.dataset.index + '].checked'
     this.setData({
-      index1: e.detail.value
+      [key]: e.detail.value
+    })
+  },
+  deleteData () {
+    const obj = {
+      type: ['数字', '文本', '金额'],
+      index: 0,
+      checked: false
+    }
+    this.data.dataArr.pop()
+    this.setData({
+      dataArr: this.data.dataArr
+    })
+  },
+  addData () {
+    const obj = {
+      type: ['数字', '文本', '金额'],
+      index: 0,
+      checked: false
+    }
+    this.data.dataArr.push(obj)
+    this.setData({
+      dataArr: this.data.dataArr
     })
   }
 })

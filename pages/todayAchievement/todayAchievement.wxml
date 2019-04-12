@@ -1,76 +1,45 @@
 <view class="tody-content">
-  <view class="item"><mycell desc="日期">2019-03-06 星期二</mycell></view>
-  <view class="item"><mycell desc="门店数">6/25</mycell></view>
-  <view class="panel">
-    <view class="table">
-      <view class="thead tItem flex">
-        <view class="flexItem">
-          <view>总金额</view>
-          <view>￥536288</view>
-          <view>-80.5</view>
-        </view>
-        <view class="flexItem">
-          <view>总数量</view>
-        </view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem">
-          <view>客单价</view>
-        </view>
-        <view class="flexItem">
-          <view>客单价</view>
-        </view>
-      </view>
-    </view>
+<block wx:if="{{userWeight === 1}}">
+  <achievement></achievement>
+</block>
+<block wx:if="{{userWeight === 2}}">
+  <view class="item">
+    <mycell desc="日期">
+      <view>2019-03-06 星期二</view>
+    </mycell>
   </view>
-  <view class="title">区域门店排行</view>
-  <view class="panel">
-    <view class="table">
-      <view class="thead tItem flex">
-        <view class="flexItem flex20">排名</view>
-        <view class="flexItem">门店</view>
-        <view class="flexItem">总金额</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-    </view>
+  <view class="item">
+    <mycell desc="门店数">
+      <view>6/25</view>
+    </mycell>
   </view>
-  <view class="title">全国门店TOP10</view>
-  <view class="panel">
-    <view class="table">
-      <view class="thead tItem flex">
-        <view class="flexItem flex20">排名</view>
-        <view class="flexItem">门店</view>
-        <view class="flexItem">总金额</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
+  <form bindsubmit="formsubmit">
+    <view class="item">
+      <mycell desc="总数量">
+        <view class="formRight">
+          <input type="number" name="number" />
+          <text>件</text>
+        </view>
+      </mycell>
     </view>
-  </view>
+    <view class="item">
+      <mycell desc="总金额">
+        <view class="formRight">
+          <input type="digit" name="money" />
+          <text>元</text>
+        </view>
+      </mycell>
+    </view>
+    <view class="item">
+      <mycell desc="备注">
+        <view class="formRight">
+          <textarea type="digit" name="comment" />
+        </view>
+      </mycell>
+    </view>
+    <view class="item btn">
+      <button form-type="submit">保存</button>
+    </view>
+  </form>
+</block>
 </view>

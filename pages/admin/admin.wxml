@@ -4,56 +4,42 @@
     <view class="admin-thead">
       <view class="admin-item">
         <view class="admin-flex40">名称</view>
-        <view class="admin-flex30">类型</view>
+        <view class="admin-flex20">类型</view>
         <view class="admin-flex20">序号</view>
-        <view class="admin-flex10">启用</view>
+        <view class="admin-flex20">启用</view>
       </view>
     </view>
     <view class="admin-tbody">
-      <view class="admin-item">
-        <view class="admin-flex40">
-          <view class="admin-edit">
-            <input />
+      <block wx:for="{{dataArr}}" wx:key="{{index}}">
+        <view class="admin-item">
+          <view class="admin-flex40">
+            <view class="admin-edit">
+              <input />
+            </view>
+          </view>
+          <view class="admin-flex20">
+            <view class="admin-edit">
+              <picker mode="selector" bindchange="pickerChange" value="{{item.index}}" range="{{item.type}}" data-index="{{index}}" disabled="{{item.checked}}">
+                <text>{{item.type[item.index]}}</text>
+              </picker>
+            </view>
+          </view>
+          <view class="admin-flex20">
+            <view class="admin-edit">
+              <input type="number"  disabled="{{item.checked}}"/>
+            </view>
+          </view>
+          <view class="admin-flex20">
+            <view class="admin-middle">
+              <switch color="#2d8cf0" data-index="{{index}}"  bindchange="switchChange"/>
+            </view>
           </view>
         </view>
-        <view class="admin-flex30">
-          <view class="admin-edit">
-            <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"><text>{{array[index]}}</text></picker>
-          </view>
-        </view>
-        <view class="admin-flex20">
-          <view class="admin-edit">
-            <picker mode="selector" bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}"><text>{{array1[index]}}</text></picker>
-          </view>
-        </view>
-        <view class="admin-flex10">
-          <view class="admin-middle">
-            <checkbox color="#2d8cf0" />
-          </view>
-        </view>
-      </view>
-      <view class="admin-item">
-        <view class="admin-flex40">
-          <view class="admin-edit">
-            <input />
-          </view>
-        </view>
-        <view class="admin-flex30">
-          <view class="admin-edit">
-            <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"><text>{{array[index]}}</text></picker>
-          </view>
-        </view>
-        <view class="admin-flex20">
-          <view class="admin-edit">
-            <picker mode="selector" bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}"><text>{{array1[index1]}}</text></picker>
-          </view>
-        </view>
-        <view class="admin-flex10">
-          <view class="admin-middle">
-            <checkbox color="#2d8cf0" />
-          </view>
-        </view>
-      </view>
+      </block>
+    </view>
+    <view class="action-btn">
+      <i-button type="error" shape="circle" size="small" inline bind:click="deleteData">删除</i-button>
+      <i-button type="success" shape="circle" size="small" inline bind:click="addData">新增</i-button>
     </view>
     <view class="admin-tfoot">
       <i-button type="primary">确定</i-button>

@@ -1,4 +1,4 @@
 <view class="mycell">
   <view class="left">{{desc}}：</view>
-  <view class="right"><slot></slot></view>
+  <slot></slot>
 </view>

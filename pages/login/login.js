@@ -1,4 +1,5 @@
 const { $Toast } = require('../../common/iview/base/index')
+const app = getApp()
 Page({
   data: {
     userName: '',
@@ -31,14 +32,20 @@ Page({
         loading: false
       })
       if (this.data.userName === 'admin') {
+        wx.setStorageSync('userWeight', 0)
         wx.navigateTo({
           url: '/pages/admin/admin'
         })
       } else {
+        if (this.data.userName === 'user1') {
+          wx.setStorageSync('userWeight', 1)
+        } else if (this.data.userName === 'user2') {
+          wx.setStorageSync('userWeight', 2)
+        }
         wx.switchTab({
           url: '/pages/todayAchievement/todayAchievement'
         })
       }
-    }, 2000)
+    }, 1000)
   }
 })

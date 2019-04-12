@@ -1,3 +1,27 @@
 .tody-content {
   padding: 10px;
 }
+.formRight {
+  width: 100%;
+  overflow: hidden;
+}
+.item {
+  margin-bottom: 10px;
+}
+input, textarea {
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 5px 10px;
+}
+.formRight input {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.formRight textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  font-size: 28rpx;
+}

@@ -54,3 +54,4 @@
     </view>
   </view>
 </view>
+<button bindtap="jumpToLogin">返回登陆页</button>

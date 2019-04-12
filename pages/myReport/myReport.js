@@ -6,5 +6,10 @@ Page({
     this.setData({
       current: detail.key
     });
+  },
+  jumpToLogin () {
+    wx.redirectTo({
+      url: '/pages/login/login'
+    })
   }
 })

@@ -1,0 +1,33 @@
+.title {
+  font-size: 34rpx;
+}
+.panel {
+  background: #fff;
+  border-radius: 8rpx;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 6px;
+  font-size: 26rpx;
+}
+.table {
+  border: 1px solid #999;
+}
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+.flex + .flex {
+  border-top: 1px solid #999;
+}
+.flexItem {
+  flex: 1 0;
+  text-align: center;
+  padding: 4px 0;
+}
+.flex20 {
+  flex: 0 0 20%;
+}
+.flexItem + .flexItem {
+  border-left: 1px solid #999;
+}
