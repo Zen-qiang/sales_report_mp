@@ -20,6 +20,13 @@ Page({
   },
   login () {
     if (this.loading) return
+    if (!this.data.userName) {
+      $Toast({
+        content: '请输入用户名',
+        type: 'error'
+      })
+      return
+    }
     this.setData({
       loading: true
     })
@@ -37,10 +44,18 @@ Page({
           url: '/pages/admin/admin'
         })
       } else {
-        if (this.data.userName === 'user1') {
+        if (this.data.userName === 'quyu') {
           wx.setStorageSync('userWeight', 1)
-        } else if (this.data.userName === 'user2') {
+        } else if (this.data.userName === 'quanguo') {
           wx.setStorageSync('userWeight', 2)
+        } else if (this.data.userName === 'mendian') {
+          wx.setStorageSync('userWeight', 3)
+        } else {
+          $Toast({
+            content: '无效账户',
+            type: 'error'
+          })
+          return
         }
         wx.switchTab({
           url: '/pages/todayAchievement/todayAchievement'

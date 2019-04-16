@@ -1,0 +1,19 @@
+.myreport-content {
+  padding-top: 42px;
+}
+.myreopr-tab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+}
+.myreopr-content {
+  padding: 10px;
+}
+button {
+  margin: 10px;
+  font-size: 28rpx;
+  line-height: 44px;
+  border-radius: 2px;
+}

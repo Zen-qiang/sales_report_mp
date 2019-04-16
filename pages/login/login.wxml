@@ -5,4 +5,4 @@
     <view><i-button bind:click="login" type="primary" loading="{{loading}}">登陆</i-button></view>
   </view>
 </view>
-<!-- <i-toast id="toast" /> -->
+<i-toast id="toast" />

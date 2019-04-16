@@ -1,0 +1,26 @@
+<view class="rank">
+  <view class="item">
+    <mycell desc="日期">
+      <view>{{today}}</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="区域">
+      <view>华东区</view>
+    </mycell>
+  </view>
+  <view class="panel">
+    <view class="table">
+      <view class="thead tItem flex">
+        <view class="flexItem flex20">排名</view>
+        <view class="flexItem">门店</view>
+        <view class="flexItem">总金额</view>
+      </view>
+      <view class="tbody tItem flex" wx:for="{{list}}" wx:key="{{index}}" bind:tap="jumpInfo">
+        <view class="flexItem flex20">{{index + 1}}</view>
+        <view class="flexItem">{{item.name}}</view>
+        <view class="flexItem">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

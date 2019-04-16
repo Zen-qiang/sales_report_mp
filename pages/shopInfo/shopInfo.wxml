@@ -1,0 +1,47 @@
+<view class="shopInfo">
+  <view class="item">
+    <mycell desc="门店">
+      <view>上海正大广场店</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="日期">
+      <view>{{today}}</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="总单量">
+      <view>20单</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="总数量">
+      <view>16件</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="总金额">
+      <view>9698.00元</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="客单价">
+      <view>606.13元</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="客单件">
+      <view>1.7件</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="昨日区域排名">
+      <view>第一名</view>
+    </mycell>
+  </view>
+  <view class="item">
+    <mycell desc="前位业绩差额">
+      <view>--</view>
+    </mycell>
+  </view>
+</view>

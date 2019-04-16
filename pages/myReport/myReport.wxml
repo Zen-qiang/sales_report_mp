@@ -1,8 +1,8 @@
 <view class="myreport-content">
   <view class="myreopr-tab">
     <i-tabs current="{{ current }}" bindchange="handleChange">
-      <i-tab key="{{0}}" title="本周"></i-tab>
-      <i-tab key="{{1}}" title="本月"></i-tab>
+      <i-tab key="0" title="本周"></i-tab>
+      <i-tab key="1" title="本月"></i-tab>
     </i-tabs>
   </view>
   <view class="myreopr-content">
@@ -11,44 +11,40 @@
         <view class="thead tItem flex">
           <view class="flexItem">
             <view>总金额</view>
-            <view>￥536288</view>
-            <view>-80.5</view>
+            <view>￥{{summary[current].sumAmt.price}}元</view>
+            <view>{{summary[current].sumAmt.percent}}%</view>
           </view>
           <view class="flexItem">
             <view>总数量</view>
+            <view>{{summary[current].sumNum.count}}件</view>
+            <view>{{summary[current].sumNum.percent}}%</view>
           </view>
         </view>
         <view class="tbody tItem flex">
           <view class="flexItem">
             <view>客单价</view>
+            <view>{{summary[current].singleAmt.price}}元</view>
+            <view>{{summary[current].singleAmt.percent}}%</view>
           </view>
           <view class="flexItem">
-            <view>客单价</view>
+            <view>客单件</view>
+            <view>{{summary[current].singleNmu.count}}件</view>
+            <view>{{summary[current].singleNmu.percent}}%</view>
           </view>
         </view>
       </view>
     </view>
-    <view class="panel">
+    <view class="panel" wx:if="{{userWeight === 1 || userWeight === 2}}">
       <view class="table">
         <view class="thead tItem flex">
           <view class="flexItem flex20">排名</view>
-          <view class="flexItem">门店</view>
+          <view class="flexItem">{{thead}}</view>
           <view class="flexItem">总金额</view>
         </view>
-        <view class="tbody tItem flex">
-          <view class="flexItem flex20">1</view>
-          <view class="flexItem">上海正大广场店</view>
-          <view class="flexItem">20168</view>
-        </view>
-        <view class="tbody tItem flex">
-          <view class="flexItem flex20">1</view>
-          <view class="flexItem">上海正大广场店</view>
-          <view class="flexItem">20168</view>
-        </view>
-        <view class="tbody tItem flex">
-          <view class="flexItem flex20">1</view>
-          <view class="flexItem">上海正大广场店</view>
-          <view class="flexItem">20168</view>
+        <view class="tbody tItem flex" wx:for="{{list}}" wx:key="{{index}}">
+          <view class="flexItem flex20">{{index + 1}}</view>
+          <view class="flexItem">{{item.name}}</view>
+          <view class="flexItem">{{item.price}}</view>
         </view>
       </view>
     </view>

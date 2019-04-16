@@ -33,6 +33,26 @@ App({
       }
     })
   },
+  formateDate: function () {
+    let today, yesterday
+    today = new Date()
+    yesterday = new Date(new Date - 1000 * 60 * 60 * 24)
+    const format = date => {
+      let y = date.getFullYear()
+      let m = date.getMonth() + 1
+      m = m < 10 ? '0' + m : m
+      let d = date.getDate()
+      d = d < 10 ? ('0' + d) : d
+      let weekArr = ['日', '一', '二', '三', '四', '五', '六']
+      let week = '星期' + weekArr[date.getDay()]
+      return y + '-' + m + '-' + d + '  ' + week
+    }
+    return {
+      today: format(today),
+      yesterday: format(yesterday)
+    }
+  },
+  today: '2333',
   globalData: {
     userInfo: null
   }

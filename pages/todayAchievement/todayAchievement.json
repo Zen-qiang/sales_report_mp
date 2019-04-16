@@ -2,6 +2,7 @@
   "navigationBarTitleText": "今日业绩",
   "usingComponents": {
     "mycell": "../../components/mycell/mycell",
-    "achievement": "../../components/achievement/achievement"
+    "achievement": "../../components/achievement/achievement",
+    "i-toast": "/common/iview/toast/index"
   }
 }

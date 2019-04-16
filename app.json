@@ -5,6 +5,8 @@
     "pages/yesterdayAchievement/yesterdayAchievement",
     "pages/myReport/myReport",
     "pages/admin/admin",
+    "pages/rank/rank",
+    "pages/shopInfo/shopInfo",
     "pages/logs/logs"
   ],
   "window":{

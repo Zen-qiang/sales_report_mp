@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "门店业绩",
+  "usingComponents": {
+    "mycell": "../../components/mycell/mycell"
+  }
+}

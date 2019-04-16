@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "mycell": "../mycell/mycell"
+    "mycell": "../mycell/mycell",
+    "i-icon": "../../common/iview/icon/index"
   }
 }

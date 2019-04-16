@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "门店排行",
+  "usingComponents": {
+    "mycell": "../../components/mycell/mycell"
+  }
+}

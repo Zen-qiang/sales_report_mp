@@ -1,5 +1,18 @@
 .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.title .desc {
   font-size: 34rpx;
+}
+.title .more {
+  font-size: 24rpx;
+}
+.title .more text {
+  display: inline-block;
+  vertical-align: middle;
 }
 .panel {
   background: #fff;

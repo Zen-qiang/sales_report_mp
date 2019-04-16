@@ -1,23 +1,31 @@
 <view class="tody-content">
-<block wx:if="{{userWeight === 1}}">
-  <achievement></achievement>
+<block wx:if="{{userWeight === 1 || userWeight === 2}}">
+  <achievement date="{{today}}" thead="{{thead}}" count-shop="{{achievementData.countShop}}" sum-data="{{achievementData.sumData}}" shop-rank="{{shopRank}}" shop-top="{{shopTop}}"></achievement>
 </block>
-<block wx:if="{{userWeight === 2}}">
+<block wx:if="{{userWeight === 3}}">
   <view class="item">
-    <mycell desc="日期">
-      <view>2019-03-06 星期二</view>
+    <mycell desc="门店">
+      <view>上海正大广场店</view>
     </mycell>
   </view>
   <view class="item">
-    <mycell desc="门店数">
-      <view>6/25</view>
+    <mycell desc="日期">
+      <view>{{today}}</view>
     </mycell>
   </view>
   <form bindsubmit="formsubmit">
     <view class="item">
+      <mycell desc="总单数">
+        <view class="formRight">
+          <input type="number" name="singleNumber" value="18" />
+          <text>件</text>
+        </view>
+      </mycell>
+    </view>
+    <view class="item">
       <mycell desc="总数量">
         <view class="formRight">
-          <input type="number" name="number" />
+          <input type="number" name="sumNumber" value="30" />
           <text>件</text>
         </view>
       </mycell>
@@ -25,7 +33,7 @@
     <view class="item">
       <mycell desc="总金额">
         <view class="formRight">
-          <input type="digit" name="money" />
+          <input type="digit" name="money" value="20168" />
           <text>元</text>
         </view>
       </mycell>
@@ -33,7 +41,7 @@
     <view class="item">
       <mycell desc="备注">
         <view class="formRight">
-          <textarea type="digit" name="comment" />
+          <textarea type="digit" name="comment" value="新开会员5人" />
         </view>
       </mycell>
     </view>
@@ -43,3 +51,4 @@
   </form>
 </block>
 </view>
+<i-toast id="toast" />

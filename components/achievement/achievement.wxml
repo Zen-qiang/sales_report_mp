@@ -1,11 +1,11 @@
   <view class="item">
     <mycell desc="日期">
-      <view>2019-03-06 星期二</view>
+      <view>{{date}}</view>
     </mycell>
   </view>
   <view class="item">
     <mycell desc="门店数">
-      <view>6/25</view>
+      <view>{{countShop}}</view>
     </mycell>
   </view>
   <view class="panel">
@@ -13,24 +13,53 @@
       <view class="thead tItem flex">
         <view class="flexItem">
           <view>总金额</view>
-          <view>￥536288</view>
-          <view>-80.5</view>
+          <view>￥{{sumData.sumAmt.price}}元</view>
+          <view>{{sumData.sumAmt.percent}}%</view>
         </view>
         <view class="flexItem">
           <view>总数量</view>
+          <view>￥{{sumData.sumNum.count}}件</view>
+          <view>{{sumData.sumNum.percent}}%</view>
         </view>
       </view>
       <view class="tbody tItem flex">
         <view class="flexItem">
           <view>客单价</view>
+          <view>￥{{sumData.singleAmt.price}}元</view>
+          <view>{{sumData.singleAmt.percent}}%</view>
         </view>
         <view class="flexItem">
-          <view>客单价</view>
+          <view>客单件</view>
+          <view>￥{{sumData.singleNum.count}}件</view>
+          <view>{{sumData.singleNum.percent}}%</view>
         </view>
       </view>
     </view>
   </view>
-  <view class="title">区域门店排行</view>
+  <view class="title">
+    <view class="desc">{{shopRank.title}}</view>
+    <view class="more" wx:if="{{thead === '门店'}}" bind:tap="jumpRank">
+      <text>查看更多</text>
+      <i-icon type="enter" size="14" color="#80848f" />
+    </view>
+  </view>
+  <view class="panel">
+    <view class="table">
+      <view class="thead tItem flex">
+        <view class="flexItem flex20">排名</view>
+        <view class="flexItem">{{thead}}</view>
+        <view class="flexItem">总金额</view>
+      </view>
+      <view wx:for="{{shopRank.list}}" wx:key="{{index}}" class="tbody tItem flex" bind:tap="jumpRankItem">
+        <view class="flexItem flex20">{{index + 1}}</view>
+        <view class="flexItem">{{item.name}}</view>
+        <view class="flexItem">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="title">
+    <view class="desc">{{shopTop.title}}</view>
+  </view>
   <view class="panel">
     <view class="table">
       <view class="thead tItem flex">
@@ -38,45 +67,10 @@
         <view class="flexItem">门店</view>
         <view class="flexItem">总金额</view>
       </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-    </view>
-  </view>
-  <view class="title">全国门店TOP10</view>
-  <view class="panel">
-    <view class="table">
-      <view class="thead tItem flex">
-        <view class="flexItem flex20">排名</view>
-        <view class="flexItem">门店</view>
-        <view class="flexItem">总金额</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
-      </view>
-      <view class="tbody tItem flex">
-        <view class="flexItem flex20">1</view>
-        <view class="flexItem">上海正大广场店</view>
-        <view class="flexItem">20168</view>
+      <view wx:for="{{shopTop.list}}" wx:key="{{index}}" class="tbody tItem flex">
+        <view class="flexItem flex20">{{index + 1}}</view>
+        <view class="flexItem">{{item.name}}</view>
+        <view class="flexItem">{{item.price}}</view>
       </view>
     </view>
   </view>
