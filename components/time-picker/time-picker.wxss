@@ -1,0 +1,38 @@
+.picker-container {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+/* 日期正常显示 */
+.picker-content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.picker-content .lt {
+  margin-right: 30rpx;
+}
+.picker-content .rt {
+  flex: auto;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+}
+.picker-content .rt .rt-icon {
+  position: relative;
+  width: 50rpx;
+  text-align: right;
+}
+.picker-content .rt .rt-icon .picker-com {
+  vertical-align: middle;
+}
+.picker-content .rt .rt-time {}
+/* 中间hr分割线 */
+.hr {
+  height: 1px;
+  background: #ddd;
+  margin: 15rpx 0;
+}
+/* 日期显示在下面 */
+.picker-time {
+  color: #999;
+}

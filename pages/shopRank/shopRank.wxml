@@ -1,0 +1,14 @@
+<view class="shopRank">
+  <view class="page-title">
+    <view class="title">门店排行</view>
+  </view>
+  <view class="time-container">
+    <time-picker show-icon bind:changeDate="getChangeDate" value="{{date}}"></time-picker>
+  </view>
+  <view class="area-container">
+    <area-shop area="{{area}}"></area-shop>
+  </view>
+  <view class="shop-rank">
+    <rank-list shop-list="{{shopList}}" date="{{date}}" can-click></rank-list>
+  </view>
+</view>

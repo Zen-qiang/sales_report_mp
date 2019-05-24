@@ -1,7 +1,9 @@
 {
   "component": true,
   "usingComponents": {
-    "mycell": "../mycell/mycell",
-    "i-icon": "../../common/iview/icon/index"
+    "time-picker": "/components/time-picker/time-picker",
+    "area-shop": "/components/area-shop/area-shop",
+    "report-table": "/components/report-table/report-table",
+    "rank-list": "/components/rank-list/rank-list"
   }
 }

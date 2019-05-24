@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "time-picker": "/components/time-picker/time-picker",
+    "area-shop": "/components/area-shop/area-shop",
+    "rank-list": "/components/rank-list/rank-list"
+  }
+}

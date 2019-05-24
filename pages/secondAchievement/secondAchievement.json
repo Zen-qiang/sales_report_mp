@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "achievement": "/components/achievement/achievement"
+  }
+}

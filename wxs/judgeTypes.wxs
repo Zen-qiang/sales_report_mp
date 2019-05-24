@@ -1,0 +1,20 @@
+var labels = ['数字', '金额'],
+  zhs = ['件', '元'],
+  types = ['number', 'digit'],
+  type, cs, zh,
+  judge = function (value) {
+  for (var i = 0; i < labels.length; i++) {
+    if (value === labels[i]) {
+      type = types[i]
+      cs = i
+      zh = zhs[i]
+      break
+    }
+  }
+  return {
+    type: type, // input的类型
+    cs: cs, // 作为class 当等于0时 宽度为50% 为1时 宽度为100%
+    zh: zh // input后面显示单位
+  }
+}
+module.exports.judge = judge

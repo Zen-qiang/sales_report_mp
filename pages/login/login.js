@@ -1,66 +1,76 @@
-const { $Toast } = require('../../common/iview/base/index')
+import { login as $login } from '../../utils/action'
 const app = getApp()
+import Toast from '../../common/vantUI/toast/toast'
 Page({
   data: {
     userName: '',
     password: '',
     loading: false
   },
+  onLoad () {
+    wx.clearStorageSync()
+  },
   inputUserName (e) {
-    // console.log(e.detail.detail.value)
+    // console.log(e)
     this.setData({
-      userName: e.detail.detail.value
+      userName: e.detail
     })
   },
   inputPasswrod (e) {
     // console.log(e)
     this.setData({
-      password: e.detail.detail.value
+      password: e.detail
     })
   },
   login () {
     if (this.loading) return
     if (!this.data.userName) {
-      $Toast({
-        content: '请输入用户名',
-        type: 'error'
+      Toast.fail({
+        message: '请输入用户名',
+        position: 'top'
       })
       return
     }
     this.setData({
       loading: true
     })
-    setTimeout(() => {
-      // $Toast({
-      //   content: '错误的提示',
-      //   type: 'error'
-      // })
+    $login({
+      username: this.data.userName,
+      password: this.data.password
+    }).then(({ data }) => {
       this.setData({
         loading: false
       })
-      if (this.data.userName === 'admin') {
-        wx.setStorageSync('userWeight', 0)
-        wx.navigateTo({
-          url: '/pages/admin/admin'
-        })
-      } else {
-        if (this.data.userName === 'quyu') {
-          wx.setStorageSync('userWeight', 1)
-        } else if (this.data.userName === 'quanguo') {
-          wx.setStorageSync('userWeight', 2)
-        } else if (this.data.userName === 'mendian') {
-          wx.setStorageSync('userWeight', 3)
-        } else {
-          $Toast({
-            content: '无效账户',
-            type: 'error'
+      switch (data.code) {
+        case 'NW': // 全国汇总
+        case 'ZY': // 全国直营
+        case 'RA': // 区域汇总
+        case 'JM': // 全国加盟
+        case 'QYZY': // 区域直营
+        case 'QYJM': // 区域加盟
+        case 'SUBAREA': // 二级区域
+        case 'SS': // 门店
+          app.globalData.loginInfo = data
+          wx.setStorageSync('sessionKey', data.sessionToken)
+          wx.switchTab({
+            url: '/pages/todayAchievement/todayAchievement'
           })
-          return
-        }
-        wx.switchTab({
-          url: '/pages/todayAchievement/todayAchievement'
-        })
+          break;
+        default:
+          Toast.fail({
+            message: '无效用户',
+            position: 'top'
+          })
       }
-    }, 1000)
+    }).catch(err => {
+      console.log(err)
+      Toast.fail({
+        message: err.msg || '登陆失败',
+        position: 'top'
+      })
+      this.setData({
+        loading: false
+      })
+    })
   }
 })

@@ -1,0 +1,29 @@
+<wxs src="../../wxs/judgeTypes.wxs" module="judgeType"></wxs>
+<view class="editAchievement-container">
+  <view class="area-container">
+    <area-shop area="{{area}}" positionBottom></area-shop>
+  </view>
+  <view class="time-container">
+    <time-picker show-icon bind:changeDate="getChangeDate" positionBottom></time-picker>
+  </view>
+  <view class="data-tontainer">
+    <form bindsubmit="templateSubmit">
+      <view class="data-content">
+        <block wx:for="{{dataList}}" wx:key="item.id">
+          <view class="data-tiem {{'flex' + judgeType.judge(item.type).cs}}">
+            <view class="data-title">{{item.fieldName}}</view>
+            <view class="data-input {{focusIndex === index ? 'focus' : ''}}">
+              <label>
+                <input type="{{judgeType.judge(item.type).type}}" name="{{item.fieldEngName}}" data-index="{{index}}" bindfocus="inputFocus" bindblur="inputBlur"/>
+                <text>{{judgeType.judge(item.type).zh}}</text>
+              </label>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="data-btn">
+        <button form-type="submit">保存</button>
+      </view>
+    </form>
+  </view>
+</view>

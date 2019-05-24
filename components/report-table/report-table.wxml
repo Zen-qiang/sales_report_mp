@@ -1,0 +1,27 @@
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view class="table-container">
+  <view class="row-item">
+    <view class="col-item">
+      <view class="item-title">总金额</view>
+      <view class="item-value amt">{{format.amt(reportData.totalAmount)}}</view>
+      <view class="item-value percent">{{reportData.totalAmountRange}}</view>
+    </view>
+    <view class="col-item">
+      <view class="item-title">总数量</view>
+      <view class="item-value qty">{{format.qty(reportData.totalPackage)}}</view>
+      <view class="item-value percent">{{reportData.totalPackageRange}}</view>
+    </view>
+  </view>
+  <view class="row-item">
+    <view class="col-item">
+      <view class="item-title">客单价</view>
+      <view class="item-value amt">{{format.amt(reportData.averageAmount)}}</view>
+      <view class="item-value percent">{{reportData.averageAmountRange}}</view>
+    </view>
+    <view class="col-item">
+      <view class="item-title">连单率</view>
+      <view class="item-value qty">{{format.qty(reportData.averagePackage)}}</view>
+      <view class="item-value percent">{{reportData.averagePackageRange}}</view>
+    </view>
+  </view>
+</view>

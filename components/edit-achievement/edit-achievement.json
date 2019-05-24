@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "area-shop": "/components/area-shop/area-shop",
+    "time-picker": "/components/time-picker/time-picker"
+  }
+}

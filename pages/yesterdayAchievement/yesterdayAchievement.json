@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "昨日业绩",
-  "usingComponents": {
-    "mycell": "../../components/mycell/mycell",
-    "achievement": "../../components/achievement/achievement"
-  }
-}

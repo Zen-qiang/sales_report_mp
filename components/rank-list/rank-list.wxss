@@ -1,0 +1,75 @@
+.rank-container {}
+/* 标题 */
+.rank-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #000;
+  line-height: 64rpx;
+  position: relative;
+}
+.rank-title .title-text {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.rank-title .myIcon {
+  font-size: 24rpx;
+}
+.rank-title .clickBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* 内容 */
+.rank-list {
+  font-size: 24rpx;
+}
+.rank-list .list-title, .rank-list .list-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 80rpx;
+}
+/* 表格标题 */
+.rank-list .list-title {
+  font-weight: bold;
+}
+/* 表格内容 */
+.rank-list .list-row {}
+.list-row:nth-child(even) {
+  background: #fff6e8;
+}
+.list-row:nth-child(odd) {
+  background: #f6e7cc;
+}
+.list-row.gray:nth-child(even) {
+  background: #f6f6f6;
+}
+.list-row.gray:nth-child(odd) {
+  background: #ededed;
+}
+.col-item {
+  text-align: center;
+}
+.col-item:first-of-type {
+  flex: 0 0 80rpx;
+}
+.col-item.flex1 {
+  flex: 1 0;
+}
+.col-item.flex2 {
+  flex: 2 0;
+}
+.col-item.flex3 {
+  flex: 3 0;
+}
+.col-item.flex4 {
+  flex: 4 0;
+}
+.col-item.flex5 {
+  flex: 5 0;
+}

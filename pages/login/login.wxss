@@ -1,3 +1,33 @@
-.p-login-container {
-  padding-top: 20px;
+
+.login-container {
+}
+.logo {
+  text-align: center;
+  padding: 60rpx 0;
+}
+.logo image {
+  width: 320rpx;
+  margin-bottom: 30rpx;
+}
+.logo .sub {
+  font-size: 26rpx;
+}
+.input-container {
+  /* padding: 0 60rpx; */
+}
+.input-container .van-cell {
+  padding-left: 0;
+  padding-right: 0;
+}
+.input-container .van-cell .van-cell__left-icon-wrap {
+  margin-right: 10px;
+}
+.input-item {
+  border-bottom: 1px solid #ddd;
+}
+.login-btn {
+  margin-top: 68rpx;
+}
+.login-btn .van-button {
+  width: 100%;
 }

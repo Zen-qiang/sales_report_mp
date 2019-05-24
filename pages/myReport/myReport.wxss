@@ -1,19 +1,83 @@
-.myreport-content {
-  padding-top: 42px;
+.tab-bar {
+
 }
-.myreopr-tab {
-  position: fixed;
-  top: 0;
+.tab-bar .tab-container {
+}
+/* tab title部分 */
+.tab-bar .tab-container .tab-content {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #999;
+  text-align: center;
+}
+.tab-bar .tab-container .tab-content .tab-item {
+  flex: 1 0;
+  padding: 15rpx 0;
+  position: relative;
+}
+.tab-bar .tab-container .tab-content .tab-item.active {
+  color: #000;
+}
+.tab-bar .tab-container .tab-content .tab-item.active::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
   left: 0;
   right: 0;
-  height: 42px;
+  width: 70%;
+  height: 1px;
+  margin: 0 auto;
+  background: #000;
 }
-.myreopr-content {
-  padding: 10px;
+/* 分割线 */
+.hr {
+  height: 1px;
+  background: #ddd;
+}
+/* 时间选择器 部分 */
+.tab-bar .tab-container .date-content {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 24rpx;
+  align-items: stretch;
+  font-size: 24rpx;
+  color: #999;
+}
+.date-start, .date-end {
+  flex: 2 0;
+  margin-right: 30rpx;
+}
+.date-start .date-item, .date-end .date-item {
+  /* height: 100%; */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 4rpx 0;
+}
+.tab-bar .tab-container .date-content picker view {
+  line-height: 44rpx;
+  padding: 0 10rpx;
+}
+.tab-bar .tab-container .date-content .myBtn {
+  height: 28px;
+  line-height: 28px;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+}
+/* 业绩 */
+.report-content {
+  padding: 40rpx 0;
+}
+.jumpLink {
+  margin-top: 80rpx;
+  padding-bottom: 40rpx;
 }
 button {
-  margin: 10px;
   font-size: 28rpx;
-  line-height: 44px;
-  border-radius: 2px;
+  line-height: 40px;
+  border-radius: 0;
+  border-color: #687378;
+  background: #fff;
 }

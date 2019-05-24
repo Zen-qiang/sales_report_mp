@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -33,18 +33,37 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
-					"name": "自定义报数模板",
-					"pathName": "pages/admin/admin",
+					"name": "今日业绩",
+					"pathName": "pages/todayAchievement/todayAchievement",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "今日业绩",
-					"pathName": "pages/todayAchievement/todayAchievement"
+					"name": "登陆",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的报表",
+					"pathName": "pages/myReport/myReport",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "门店信息",
+					"pathName": "pages/shopInfo/shopInfo",
+					"query": "storeId=9&date=2019-05-20"
+				},
+				{
+					"id": -1,
+					"name": "门店信息",
+					"pathName": "pages/shopInfo/shopInfo",
+					"query": "id=9&date=2019-05-20&name=哈佛后"
 				}
 			]
 		}

@@ -1,0 +1,55 @@
+.area-container, .time-container {
+  margin-bottom: 30rpx;
+}
+.data-tontainer {
+  font-size: 28rpx;
+}
+.data-tontainer .data-content {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 40rpx;
+}
+.data-tiem {
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.flex0 {
+  flex: 0 0 50%;
+  padding-right: 20rpx;
+}
+.flex0 + .flex0 {
+  padding-left: 20rpx;
+  padding-right: 0;
+}
+.flex1 {
+  flex: 0 0 100%;
+}
+.data-title {
+  margin-bottom: 10rpx;
+}
+.data-input {
+  border: 1px solid #ddd;
+  position: relative;
+  color: #999;
+}
+.data-input.focus {
+  color: #000;
+  border-color: #000;
+}
+.data-input input {
+  padding-right: 50rpx;
+}
+.data-input text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40rpx;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  margin: auto 0;
+}
+.data-btn button {
+  background: #000;
+  color: #fff;
+}

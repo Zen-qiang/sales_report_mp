@@ -1,6 +1,49 @@
-.shopInfo {
-  padding: 10px;
+.area-container, .time-container {
+  margin-bottom: 30rpx;
 }
-.item {
-  margin-bottom: 10px;
+.data-tontainer {
+  font-size: 28rpx;
+}
+.data-tontainer .data-content {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 40rpx;
+}
+.data-tiem {
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.flex0 {
+  flex: 0 0 50%;
+  padding-right: 20rpx;
+}
+.flex0 + .flex0 {
+  padding-left: 20rpx;
+  padding-right: 0;
+}
+.flex1 {
+  flex: 0 0 100%;
+}
+.data-title {
+  margin-bottom: 10rpx;
+}
+.data-input {
+  position: relative;
+  background: #eeeeee;
+}
+.data-input .data-text {
+  display: block;
+  line-height: 1.4rem;
+  height: 1.4rem;
+  padding: 10rpx 50rpx 10rpx 10rpx;
+}
+.data-input .data-zh {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40rpx;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  margin: auto 0;
 }

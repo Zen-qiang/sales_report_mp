@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "门店业绩",
   "usingComponents": {
-    "mycell": "../../components/mycell/mycell"
+    "time-picker": "/components/time-picker/time-picker",
+    "area-shop": "/components/area-shop/area-shop"
   }
 }

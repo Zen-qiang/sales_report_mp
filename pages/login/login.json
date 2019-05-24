@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "i-input": "../../common/iview/input/index",
-    "i-button": "../../common/iview/button/index",
-    "i-toast": "../../common/iview/toast/index"
+    "van-button": "/common/vantUI/button/index",
+    "van-field": "/common/vantUI/field/index",
+    "van-toast": "/common/vantUI/toast/index"
   }
 }

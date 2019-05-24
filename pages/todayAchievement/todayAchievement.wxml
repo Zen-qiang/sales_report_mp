@@ -1,54 +1,14 @@
-<view class="tody-content">
-<block wx:if="{{userWeight === 1 || userWeight === 2}}">
-  <achievement date="{{today}}" thead="{{thead}}" count-shop="{{achievementData.countShop}}" sum-data="{{achievementData.sumData}}" shop-rank="{{shopRank}}" shop-top="{{shopTop}}"></achievement>
-</block>
-<block wx:if="{{userWeight === 3}}">
-  <view class="item">
-    <mycell desc="门店">
-      <view>上海正大广场店</view>
-    </mycell>
+<wxs src="../../wxs/userWeight.wxs" module="userWeight"></wxs>
+<view class="tody-container">
+  <view class="page-title">
+    <view class="title">今日业绩</view>
   </view>
-  <view class="item">
-    <mycell desc="日期">
-      <view>{{today}}</view>
-    </mycell>
-  </view>
-  <form bindsubmit="formsubmit">
-    <view class="item">
-      <mycell desc="总单数">
-        <view class="formRight">
-          <input type="number" name="singleNumber" value="18" />
-          <text>件</text>
-        </view>
-      </mycell>
-    </view>
-    <view class="item">
-      <mycell desc="总数量">
-        <view class="formRight">
-          <input type="number" name="sumNumber" value="30" />
-          <text>件</text>
-        </view>
-      </mycell>
-    </view>
-    <view class="item">
-      <mycell desc="总金额">
-        <view class="formRight">
-          <input type="digit" name="money" value="20168" />
-          <text>元</text>
-        </view>
-      </mycell>
-    </view>
-    <view class="item">
-      <mycell desc="备注">
-        <view class="formRight">
-          <textarea type="digit" name="comment" value="新开会员5人" />
-        </view>
-      </mycell>
-    </view>
-    <view class="item btn">
-      <button form-type="submit">保存</button>
-    </view>
-  </form>
-</block>
+  <!-- 显示门店 -->
+  <block wx:if="{{userWeight.level(userCode) === 3}}">
+    <edit-achievement></edit-achievement>
+  </block>
+  <!-- 显示全国/区域 -->
+  <block wx:if="{{userWeight.level(userCode) === 0 || userWeight.level(userCode) === 1 || userWeight.level(userCode) === 2}}">
+    <achievement show-report="{{userWeight.level(userCode) <= 1}}" show-area="{{userWeight.level(userCode) <= 1}}"></achievement>
+  </block>
 </view>
-<i-toast id="toast" />

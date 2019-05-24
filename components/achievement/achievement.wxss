@@ -1,46 +1,18 @@
-.title {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+/* 日期 区域 详情 */
+.date-area-desc-container {
+  font-size: 28rpx;
 }
-.title .desc {
-  font-size: 34rpx;
+/* 日期选择器 */
+.date-area-desc-container .time-container {
 }
-.title .more {
-  font-size: 24rpx;
+/* 区域 */
+.date-area-desc-container .area-container {
 }
-.title .more text {
-  display: inline-block;
-  vertical-align: middle;
+/* 详情 */
+.date-area-desc-container .desc-container {
+  padding: 40rpx 0;
 }
-.panel {
-  background: #fff;
-  border-radius: 8rpx;
-  margin-top: 4px;
-  margin-bottom: 10px;
-  padding: 6px;
-  font-size: 26rpx;
-}
-.table {
-  border: 1px solid #999;
-}
-.flex {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-}
-.flex + .flex {
-  border-top: 1px solid #999;
-}
-.flexItem {
-  flex: 1 0;
-  text-align: center;
-  padding: 4px 0;
-}
-.flex20 {
-  flex: 0 0 20%;
-}
-.flexItem + .flexItem {
-  border-left: 1px solid #999;
+/* 区域排行 门店排行 */
+.area-rank, .shop-rank {
+  padding-bottom: 40rpx;
 }

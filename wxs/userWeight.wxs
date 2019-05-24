@@ -1,0 +1,36 @@
+// 用户权重
+// NW: 'NW', // 全国汇总
+// ZY: 'ZY', // 全国直营
+// RA: 'RA', // 区域汇总
+// JM: 'JM', // 全国加盟
+// QYZY: 'QYZY', // 区域直营
+// QYJM: 'QYJM', // 区域加盟
+// SUBAREA: 'SUBAREA', // 二级区域
+// SS: 'SS' // 门店
+var levels = [
+  ['NW', 'ZY', 'RA', 'JM'], // 汇总账号
+  ['QYZY', 'QYJM'], // 一级区域
+  ['SUBAREA'], // 二级区域
+  ['SS'] // 门店
+]
+var level = function (code) {
+  var currentLevel = null
+  for (var i = 0; i < levels.length; i++) {
+    var flag = false
+    var element = levels[i]
+    for (var j = 0; j < element.length; j++) {
+      if (code === element[j]) {
+        flag = true
+        break
+      }
+    }
+    if (flag) {
+      currentLevel = i
+      break
+    }
+  }
+  return currentLevel
+}
+module.exports = {
+  level: level
+}

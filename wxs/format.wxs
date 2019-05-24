@@ -1,0 +1,16 @@
+var amt = function (value) {
+  if (!value) {
+    return value
+  }
+  return '￥' + value + '元'
+}
+var qty = function (value) {
+  if (!value) {
+    return value
+  }
+  return value + '件'
+}
+module.exports = {
+  amt: amt,
+  qty: qty
+}

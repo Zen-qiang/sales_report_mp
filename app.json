@@ -2,43 +2,36 @@
   "pages":[
     "pages/login/login",
     "pages/todayAchievement/todayAchievement",
-    "pages/yesterdayAchievement/yesterdayAchievement",
     "pages/myReport/myReport",
-    "pages/admin/admin",
-    "pages/rank/rank",
     "pages/shopInfo/shopInfo",
+    "pages/secondAchievement/secondAchievement",
+    "pages/shopRank/shopRank",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "subaotong",
+    "navigationBarTitleText": "ROMON",
     "navigationBarTextStyle":"black",
     "backgroundColor": "#f2f2f2"
   },
   "tabBar":{
-    "color": "#333",
-    "selectedColor": "#1296db",
+    "color": "#666666",
+    "selectedColor": "#000000",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/todayAchievement/todayAchievement",
         "text": "今日业绩",
-        "iconPath": "common/resource/today.png",
-        "selectedIconPath": "common/resource/today-selected.png"
-      },
-      {
-        "pagePath": "pages/yesterdayAchievement/yesterdayAchievement",
-        "text": "昨日业绩",
-        "iconPath": "common/resource/yesterday.png",
-        "selectedIconPath": "common/resource/yesterday-selected.png"
+        "iconPath": "common/resource/home.png",
+        "selectedIconPath": "common/resource/home-selected.png"
       },
       {
         "pagePath": "pages/myReport/myReport",
         "text": "我的报表",
-        "iconPath": "common/resource/report.png",
-        "selectedIconPath": "common/resource/report-selected.png"
+        "iconPath": "common/resource/account.png",
+        "selectedIconPath": "common/resource/account-selected.png"
       }
     ]
   }

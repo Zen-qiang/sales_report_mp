@@ -1,0 +1,24 @@
+.area-content {
+  font-size: 28rpx;
+}
+.top-content .area, .top-content .shop {
+  display: inline-block;
+  margin-right: 50rpx;
+}
+.top-content .title-text {
+  margin-right: 30rpx;
+}
+.top-content .value-text {
+  color: #b1812c;
+}
+.bottom-content .title-text {
+  font-weight: bold;
+}
+.bottom-content .hr {
+  height: 1px;
+  background: #ddd;
+  margin: 15rpx 0;
+}
+.bottom-content .value-text {
+  color: #b1812c;
+}

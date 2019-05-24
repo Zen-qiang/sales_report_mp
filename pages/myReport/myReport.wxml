@@ -1,53 +1,57 @@
-<view class="myreport-content">
-  <view class="myreopr-tab">
-    <i-tabs current="{{ current }}" bindchange="handleChange">
-      <i-tab key="0" title="本周"></i-tab>
-      <i-tab key="1" title="本月"></i-tab>
-    </i-tabs>
+<wxs src="../../wxs/userWeight.wxs" module="userWeight"></wxs>
+<view class="myreport-container">
+  <view class="page-title">
+    <view class="title">门店排行</view>
   </view>
-  <view class="myreopr-content">
-    <view class="panel">
-      <view class="table">
-        <view class="thead tItem flex">
-          <view class="flexItem">
-            <view>总金额</view>
-            <view>￥{{summary[current].sumAmt.price}}元</view>
-            <view>{{summary[current].sumAmt.percent}}%</view>
+  <view class="tab-bar">
+    <view class="tab-container">
+      <view class="tab-content">
+        <view class="tab-item {{tabIndex === 0 ? 'active' : ''}}" data-index="{{0}}" bindtap="changeTabIndex">本周</view>
+        <view class="tab-item {{tabIndex === 1 ? 'active' : ''}}" data-index="{{1}}" bindtap="changeTabIndex">本月</view>
+        <view class="tab-item {{tabIndex === 2 ? 'active' : ''}}" data-index="{{2}}" bindtap="changeTabIndex">其它</view>
+      </view>
+      <view class="hr"></view>
+      <view hidden="{{tabIndex !== 2}}">
+        <view class="date-content">
+          <view class="date-start">
+            <view class="date-item">
+              <picker mode="date" bindchange="changeDateStart">
+                <view>
+                  <text wx:if="{{startDate}}">{{startDate}}</text>
+                  <text wx:else>请选择开始日期</text>
+                </view>
+              </picker>
+            </view>
           </view>
-          <view class="flexItem">
-            <view>总数量</view>
-            <view>{{summary[current].sumNum.count}}件</view>
-            <view>{{summary[current].sumNum.percent}}%</view>
+          <view class="date-end">
+            <view class="date-item">
+              <picker mode="date" bindchange="changeDateEnd" start="{{startDate}}">
+                <view>
+                  <text wx:if="{{endDate}}">{{endDate}}</text>
+                  <text wx:else>请选择结束日期</text>
+                </view>
+              </picker>
+            </view>
           </view>
-        </view>
-        <view class="tbody tItem flex">
-          <view class="flexItem">
-            <view>客单价</view>
-            <view>{{summary[current].singleAmt.price}}元</view>
-            <view>{{summary[current].singleAmt.percent}}%</view>
-          </view>
-          <view class="flexItem">
-            <view>客单件</view>
-            <view>{{summary[current].singleNmu.count}}件</view>
-            <view>{{summary[current].singleNmu.percent}}%</view>
+          <view class="date-btn">
+            <view class="date-item">
+              <van-button type="primary" custom-class="myBtn" bind:click="getAchievementByRangeTime">
+                确定
+              </van-button>
+            </view>
           </view>
         </view>
       </view>
     </view>
-    <view class="panel" wx:if="{{userWeight === 1 || userWeight === 2}}">
-      <view class="table">
-        <view class="thead tItem flex">
-          <view class="flexItem flex20">排名</view>
-          <view class="flexItem">{{thead}}</view>
-          <view class="flexItem">总金额</view>
-        </view>
-        <view class="tbody tItem flex" wx:for="{{list}}" wx:key="{{index}}">
-          <view class="flexItem flex20">{{index + 1}}</view>
-          <view class="flexItem">{{item.name}}</view>
-          <view class="flexItem">{{item.price}}</view>
-        </view>
-      </view>
-    </view>
+  </view>
+  <view class="report-content">
+    <report-table report-data="{{isSummary ? areaData : storeData}}"></report-table>
+  </view>
+  <view class="area-rank" wx:if="{{userWeight.level(userCode) === 0}}">
+    <rank-list title="大区排行" shop-list="{{areaList}}" gray></rank-list>
   </view>
 </view>
-<button bindtap="jumpToLogin">返回登陆页</button>
+<view class="jumpLink">
+  <button bindtap="logOut">返回登陆页</button>
+</view>
+<van-toast id="van-toast" />

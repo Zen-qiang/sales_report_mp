@@ -1,0 +1,20 @@
+var week = function (fullYear) {
+  if (!fullYear) {
+    return ''
+  }
+  var date = getDate()
+  var reg = getRegExp('\D')
+  var fullYearArr = fullYear.split(reg)
+  var fullYearArrInt = fullYearArr.map(function (item, index) {
+    if (index === 1) {
+      return (parseInt(item) - 1)
+    }
+    return parseInt(item)
+  })
+  date.setFullYear(fullYearArrInt[0], fullYearArrInt[1], fullYearArrInt[2])
+  var weekArr = ['日', '一', '二', '三', '四', '五', '六']
+  return '星期' + weekArr[date.getDay()]
+}
+module.exports = {
+  week: week
+}

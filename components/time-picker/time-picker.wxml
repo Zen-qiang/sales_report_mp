@@ -1,0 +1,22 @@
+<wxs src="../../wxs/week.wxs" module="week"></wxs>
+<view class="picker-container">
+  <view class="picker-content">
+    <view class="lt">
+      <text>日期</text>
+    </view>
+    <view class="rt">
+      <view class="rt-icon" wx:if="{{showIcon}}">
+        <picker class="picker-com" mode="date" value="{{date}}" end="{{app.formateDate().today}}" bindchange="bindDateChange">
+          <van-icon name="/common/resource/date.png"></van-icon>
+        </picker>
+      </view>
+      <view class="rt-time" wx:if="{{!positionBottom}}">
+        <text>{{date}} {{week.week(date)}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="picker-time" wx:if="{{positionBottom}}">
+    <text>{{date}} {{week.week(date)}}</text>
+  </view>
+</view>

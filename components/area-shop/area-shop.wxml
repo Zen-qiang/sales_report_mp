@@ -1,0 +1,19 @@
+<view class="area-content">
+  <view class="bottom-content" wx:if="{{positionBottom}}">
+    <view class="title-text">区域</view>
+    <view class="hr"></view>
+    <view class="value-text">{{area}}</view>
+  </view>
+  <view class="top-content" wx:else>
+    <!-- 区域 -->
+    <view class="area">
+      <text class="title-text">区域</text>
+      <text class="value-text">{{area}}</text>
+    </view>
+    <!-- 门店 -->
+    <view class="shop" wx:if="{{currentStores && allStores}}">
+      <text class="title-text">门店</text>
+      <text class="value-text">{{currentStores}}/{{allStores}}</text>
+    </view>
+  </view>
+</view>
