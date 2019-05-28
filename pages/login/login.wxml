@@ -30,3 +30,4 @@
   </view>
 </view>
 <van-toast id="van-toast" />
+<view class="version">version 0.1.5</view>

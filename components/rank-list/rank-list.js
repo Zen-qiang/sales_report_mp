@@ -15,7 +15,9 @@ Component({
     areaId: { // 区域id
       type: Number,
       optionalTypes: [String]
-    }
+    },
+    showArea: Boolean, // 是否显示区域排行
+    showShop: Boolean // 是否显示门店排行
   },
   methods: {
     // 跳转到二级业绩页面

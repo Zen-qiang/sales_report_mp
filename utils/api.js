@@ -1,6 +1,7 @@
 // const host = 'http://192.168.247.1:8080'
 // const host = 'http://bobo.easy.echosite.cn'
-const host = 'http://101.132.134.137:5600'
+// const host = 'http://101.132.134.137:5600'
+const host = 'https://salesreports.dlt-world.com'
 let api = {
     login: `${host}/api/login`, // 登陆
     logout: `${host}/api/logout`, // 登出

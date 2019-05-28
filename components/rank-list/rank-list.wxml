@@ -10,41 +10,51 @@
     </block>
   </view>
   <view class="rank-list">
-    <block wx:if="{{areaList.length}}">
+    <block wx:if="{{showArea}}">
       <view class="list-title">
         <view class="col-item">排行</view>
         <view class="col-item flex2">区域</view>
         <view class="col-item flex3">总金额</view>
         <view class="col-item flex2">比例</view>
       </view>
-      <view class="list-row {{gray ? 'gray': ''}}" wx:for="{{areaList}}" wx:key="{{index}}" data-obj="{{item}}" bind:tap="jumpSecondAchievement">
-        <view class="col-item">{{index + 1}}</view>
-        <view class="col-item flex2">
-          <text>{{item.name}}</text>
+      <block wx:if="{{areaList.length}}">
+        <view class="list-row {{gray ? 'gray': ''}}" wx:for="{{areaList}}" wx:key="{{index}}" data-obj="{{item}}" bind:tap="jumpSecondAchievement">
+          <view class="col-item">{{index + 1}}</view>
+          <view class="col-item flex2">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="col-item flex3">
+            <text>{{format.amt(item.totalAmount)}}</text>
+          </view>
+          <view class="col-item flex2">
+            <text>{{item.percent}}</text>
+          </view>
         </view>
-        <view class="col-item flex3">
-          <text>{{format.amt(item.totalAmount)}}</text>
-        </view>
-        <view class="col-item flex2">
-          <text>{{item.percent}}</text>
-        </view>
-      </view>
+      </block>
+      <block wx:else>
+        <view class="emptyData">暂无数据</view>
+      </block>
     </block>
-    <block wx:if="{{shopList.length}}">
+    <block wx:if="{{showShop}}">
       <view class="list-title">
         <view class="col-item">排行</view>
         <view class="col-item flex1">区域</view>
         <view class="col-item flex1">总金额</view>
       </view>
-      <view class="list-row {{gray ? 'gray': ''}}" wx:for="{{shopList}}" wx:key="{{index}}" data-obj="{{item}}" bind:tap="jumpShopInfo">
-        <view class="col-item">{{index + 1}}</view>
-        <view class="col-item flex1">
-          <text>{{item.name}}</text>
+      <block wx:if="{{shopList.length}}">
+        <view class="list-row {{gray ? 'gray': ''}}" wx:for="{{shopList}}" wx:key="{{index}}" data-obj="{{item}}" bind:tap="jumpShopInfo">
+          <view class="col-item">{{index + 1}}</view>
+          <view class="col-item flex1">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="col-item flex1">
+            <text>{{format.amt(item.totalAmount)}}</text>
+          </view>
         </view>
-        <view class="col-item flex1">
-          <text>{{format.amt(item.totalAmount)}}</text>
-        </view>
-      </view>
+      </block>
+      <block wx:else>
+        <view class="emptyData">暂无数据</view>
+      </block>
     </block>
     <!-- <view class="list-title">
       <view class="col-item">排行</view>
@@ -61,5 +71,5 @@
         <text wx:else>{{item[titleItem.value]}}</text>
       </view>
     </view> -->
-  </view>
+    </view>
 </view>

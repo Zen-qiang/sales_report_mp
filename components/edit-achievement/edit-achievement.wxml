@@ -14,8 +14,9 @@
             <view class="data-title">{{item.fieldName}}</view>
             <view class="data-input {{focusIndex === index ? 'focus' : ''}}">
               <label>
-                <input type="{{judgeType.judge(item.type).type}}" name="{{item.fieldEngName}}" data-index="{{index}}" bindfocus="inputFocus" bindblur="inputBlur"/>
-                <text>{{judgeType.judge(item.type).zh}}</text>
+                <textarea wx:if="{{judgeType.judge(item.type).type === 'textarea'}}" name="{{item.fieldEngName}}" maxlength="{{item.maxlength}}" data-index="{{index}}" bindfocus="inputFocus" bindblur="inputBlur"></textarea>
+                <input wx:else type="{{judgeType.judge(item.type).type}}" name="{{item.fieldEngName}}" maxlength="{{item.maxlength}}" data-index="{{index}}" bindfocus="inputFocus" bindblur="inputBlur"/>
+                <text wx:if="{{judgeType.judge(item.type).zh}}">{{judgeType.judge(item.type).zh}}</text>
               </label>
             </view>
           </view>

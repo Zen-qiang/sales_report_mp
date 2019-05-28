@@ -31,3 +31,10 @@
 .login-btn .van-button {
   width: 100%;
 }
+.version {
+  position: fixed;
+  bottom: 8rpx;
+  right: 15rpx;
+  font-size: 22rpx;
+  color: #ddd;
+}

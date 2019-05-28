@@ -3,6 +3,7 @@
 }
 .data-tontainer {
   font-size: 28rpx;
+  padding-bottom: 40rpx;
 }
 .data-tontainer .data-content {
   display: flex;
@@ -21,7 +22,11 @@
   padding-left: 20rpx;
   padding-right: 0;
 }
-.flex1 {
+.flex0 + .flex0:nth-child(odd) {
+  padding-left: 0;
+  padding-right: 20rpx;
+}
+.flex1, .flex2, .flex3 {
   flex: 0 0 100%;
 }
 .data-title {
@@ -36,7 +41,14 @@
   color: #000;
   border-color: #000;
 }
-.data-input input {
+.data-input label {
+  width: 100%;
+}
+.data-input textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.flex1 input, .flex2 input {
   padding-right: 50rpx;
 }
 .data-input text {

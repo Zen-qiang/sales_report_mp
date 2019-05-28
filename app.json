@@ -34,5 +34,8 @@
         "selectedIconPath": "common/resource/account-selected.png"
       }
     ]
+  },
+  "networkTimeout": {
+    "request": 10000
   }
 }

@@ -21,7 +21,11 @@
   padding-left: 20rpx;
   padding-right: 0;
 }
-.flex1 {
+.flex0 + .flex0:nth-child(odd) {
+  padding-left: 0;
+  padding-right: 20rpx;
+}
+.flex1, .flex2, .flex3 {
   flex: 0 0 100%;
 }
 .data-title {
@@ -34,8 +38,11 @@
 .data-input .data-text {
   display: block;
   line-height: 1.4rem;
-  height: 1.4rem;
+  min-height: 1.4rem;
   padding: 10rpx 50rpx 10rpx 10rpx;
+}
+.flex1 .data-text, .flex2 .data-text {
+  padding-right: 50rpx;
 }
 .data-input .data-zh {
   position: absolute;

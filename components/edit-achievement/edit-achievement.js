@@ -24,13 +24,13 @@ Component({
       })
     },
     inputFocus (e) {
-      // console.log(e)
-      this.setData({
-        focusIndex: e.currentTarget.dataset.index
+      wx.nextTick(() => {
+        this.setData({
+          focusIndex: e.currentTarget.dataset.index
+        })
       })
     },
     inputBlur (e) {
-      // console.log(e)
       this.setData({
         focusIndex: null
       })

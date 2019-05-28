@@ -12,9 +12,9 @@
 </view>
 <!-- 区域排行榜 -->
 <view class="area-rank" wx:if="{{showArea}}">
-  <rank-list title="区域排行" area-list="{{areaList}}" date="{{date}}"></rank-list>
+  <rank-list title="区域排行" area-list="{{areaList}}" date="{{date}}" show-area="{{showArea}}"></rank-list>
 </view>
 <!-- 门店排行 -->
 <view class="shop-rank">
-  <rank-list title="门店排行" shop-list="{{shopList}}" arrow can-click date="{{date}}" code="{{code}}" area-id="{{areaId}}" area="{{area}}"></rank-list>
+  <rank-list title="门店排行" shop-list="{{shopList}}" arrow can-click date="{{date}}" code="{{code}}" area-id="{{areaId}}" area="{{area}}" show-shop="{{true}}"></rank-list>
 </view>

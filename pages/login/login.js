@@ -24,9 +24,9 @@ Page({
   },
   login () {
     if (this.loading) return
-    if (!this.data.userName) {
+    if (!this.data.userName || !this.data.password) {
       Toast.fail({
-        message: '请输入用户名',
+        message: '请输入用户名密码',
         position: 'top'
       })
       return
@@ -63,9 +63,9 @@ Page({
           })
       }
     }).catch(err => {
-      console.log(err)
+      // console.log(err)
       Toast.fail({
-        message: err.msg || '登陆失败',
+        message: err && err.msg || '登陆失败',
         position: 'top'
       })
       this.setData({

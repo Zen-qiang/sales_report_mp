@@ -1,6 +1,6 @@
-var labels = ['数字', '金额'],
-  zhs = ['件', '元'],
-  types = ['number', 'digit'],
+var labels = ['数字', '金额', '长文本', '整型'],
+  zhs = ['件', '元', '', ''],
+  types = ['number', 'digit', 'textarea', 'number'],
   type, cs, zh,
   judge = function (value) {
   for (var i = 0; i < labels.length; i++) {
@@ -9,6 +9,10 @@ var labels = ['数字', '金额'],
       cs = i
       zh = zhs[i]
       break
+    } else {
+      type = types[2]
+      cs = 2
+      zh = zhs[2]
     }
   }
   return {

@@ -16,7 +16,7 @@
           <view class="data-title">{{item.fieldName}}</view>
           <view class="data-input">
             <text class="data-text">{{item.data}}</text>
-            <text class="data-zh">{{judgeType.judge(item.type).zh}}</text>
+            <text class="data-zh" wx:if="{{judgeType.judge(item.type).zh}}">{{judgeType.judge(item.type).zh}}</text>
           </view>
         </view>
       </block>

@@ -40,6 +40,13 @@
 }
 /* 表格内容 */
 .rank-list .list-row {}
+.emptyData {
+  height: 60rpx;
+  color: #999;
+  font-size: 22rpx;
+  line-height: 60rpx;
+  background: #f9f9f9;
+}
 .list-row:nth-child(even) {
   background: #fff6e8;
 }
@@ -52,7 +59,7 @@
 .list-row.gray:nth-child(odd) {
   background: #ededed;
 }
-.col-item {
+.col-item, .emptyData {
   text-align: center;
 }
 .col-item:first-of-type {

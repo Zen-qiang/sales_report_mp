@@ -9,6 +9,6 @@
     <area-shop area="{{area}}"></area-shop>
   </view>
   <view class="shop-rank">
-    <rank-list shop-list="{{shopList}}" date="{{date}}" can-click></rank-list>
+    <rank-list shop-list="{{shopList}}" date="{{date}}" can-click show-shop="{{true}}"></rank-list>
   </view>
 </view>
